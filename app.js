@@ -1,16 +1,33 @@
 const slideshowSlide = document.querySelector('.slideshow-slide'); //
 const slideshowImages = document.querySelectorAll('.slideshow-slide img'); //Do this to select all the images 
 
+
+
 //Butons 
 const prevBtn = document.querySelector('#prevBtn'); 
 const nextBtn = document.querySelector('#nextBtn');  
 const favBtn = document.querySelector ('#favBtn'); 
 
+//Using Promises   
+/*
+firebase.firestore().enablePersistence() 
+.then(function() { 
+    return that.updateUserInfo();
+}).catch(function(err) { 
+    console.log(err); 
+    });
+*/
+
+
+
+
+
 //Favourite Button Listener  
+/* 
 favBtn.addEventListener('click', () => {
 
 })
-
+*/
 
 
 //counter to let us know where we are 

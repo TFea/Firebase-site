@@ -18,7 +18,7 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --> 
   
    <title>Finesse</title>  
-  
+
 
 </head> 
 <body class="grey lighten-3">
@@ -43,7 +43,7 @@
             <a href="#" class="grey-text" id="logout">Logout</a>
           </li> 
           <li class="logged-in" style="display: none;">
-            <a href="#" class="grey-text modal-trigger" id="IsAdmin" data-target="modal-create">Create Message</a> 
+            <a href="create.html" class="grey-text modal-trigger" id="IsAdmin" data-target="modal-create">Create Message</a> 
           </li> 
           <li class="logged-out" style= "display:none;" >
             <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
@@ -73,7 +73,7 @@
         <div class="input-field"> 
           <input type="checkbox" if="signup-admin"/> 
           <label for="signup-admin">Select if an admin</label>
-        </div>--> 
+        </div>-->  
         <button class="btn yellow darken-2 z-depth-0">Sign up</button>
       </form>
     </div>
@@ -108,27 +108,29 @@
   </div>  
 
   <!-- CREATE Message MODAL  -->
-  <div id="modal-create" class="modal">
-    <div class="modal-content">
-      <h4>Create Message</h4><br/>
-      <form id="create-form">
-        </div>
-        <div class="input-field">
-          <input type="text" id="title" required>
-          <label for="title">Message Name</label>
-        </div>
-        <div class="input-field"> 
-            <textarea id="content" rows="6" cols="50" input type="text" class="materialize-textarea" required style="height: 500px;" ></textarea> 
-          <label for="content">Message Content</label>
-        </div> 
-        <div class="input-field"> 
-          <input type="url" textarea id="link" required>  
-          <label for="link">Link</label>  
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Create</button>
-      </form>
-    </div>
+ <div id="modal-create" class="modal">
+  <div class="modal-content">
+    <h4>Create Message</h4><br/>
+    <form id="create-form">
+      </div>
+      <div class="input-field">
+        <input type="text" id="title" required>
+        <label for="title">Message Name</label>
+      </div>
+      <div class="input-field"> 
+          <textarea id="content" input type="text" class="materialize-textarea" ></textarea> 
+        <label for="content">Message Content</label>
+      </div> 
+      <div class="input-field"> 
+        <input type="url" textarea id="link" required>  
+        <label for="link">Link</label>  
+      </div>
+      <button class="btn yellow darken-2 z-depth-0">Create</button>
+    </form>
   </div>
+</div>
+
+ 
 
   <!-- //Anitmated Slideshow -->
   <div class="slideshow-container">  
@@ -144,8 +146,6 @@
       <img src="./img/rsz_college_ucc.jpg" id="firstClone" alt="">  
     </div>
   </div>    
-
-  <h5 class="hidden"><u>Favourites</u></h5>
 
   <h5><u>Service Opportunities </u></h5>
 

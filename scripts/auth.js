@@ -16,7 +16,8 @@ auth.onAuthStateChanged(user => {
         setupUI();
         setupGuides([]); //this fire bcuz there was a state change in user authentication meaning when users are logged in guidelist pops out -- empty array becauseI dont need an output
     }
-}); 
+});  
+
 
 // Add new message  
 const CreateForm = document.querySelector('#create-form'); 
@@ -52,11 +53,14 @@ signupForm.addEventListener('submit', (e) => {
 
     //sign up the user  
     auth.createUserWithEmailAndPassword(email, password).then(cred => {  
+        return db.collection('users').doc(cred.user.uid).set({ 
+        })
+    }).then(() => { 
         // close signup modal and close form
         const modal =  document.querySelector('#modal-signup') 
         M.Modal.getInstance(modal).close(); 
         signupForm.reset();
-    })
+    }); 
 })
 
 //logout 
