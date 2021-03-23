@@ -2,7 +2,8 @@
 const guideList =  document.querySelector('.guides'); 
 const LoggedOutLinks = document.querySelectorAll('.logged-out')
 const LoggedInLinks = document.querySelectorAll('.logged-in')  
-const AdminGroup = new Set(["ZZcJFKJEA5d5zCx6h7JtSnOsFT42"])  
+const AdminGroup = new Set(["ZZcJFKJEA5d5zCx6h7JtSnOsFT42"])   
+var Favorites = []
 //const addToFavourites = document.querySelector('.message') 
 
 
@@ -32,9 +33,10 @@ const setupGuides = (data) => {
   if (data.length) { // making sure someone is logged in by chechiking if the array is empty or not  
     // using Firestore to retrive data on the Guidelist
     let html = '<div id="card-collection">';  
-    console.log (data); 
+    //console.log (data); 
     data.forEach(doc => {
-      const guide = doc.data();
+      const guide = doc.data(); 
+      //console.log(doc.id);
       const li = 
     
       ` 
@@ -47,10 +49,12 @@ const setupGuides = (data) => {
           <span class="card-title grey-text text-darken-4"> ${guide.title}<i class="material-icons right">close</i></span>
           <p>${guide.content}</p>
         </div> 
-        <a class="btn-floating btn-medium waves-effect waves-light red" style="position:relative; right:-250px; top:125px;"><i class="material-icons">add</i></a>
-      </div>   
+        <a class="btn-floating btn-medium waves-effect waves-light red" onclick="addToFavourites('${doc.id}', '${guide.title}', '${guide.link}', '${guide.content}')"  style="position:relative; right:-250px; top:125px;"><i class="material-icons">add</i></a>
+      </div>    
+      <div class="del-Btn">  
+        <button type="button" style="position:relative; top:250px; left:-350px" id="delBtn">Delete</button>
+      </div> 
 
-      
       `;
 
       html += li; 
@@ -63,23 +67,20 @@ const setupGuides = (data) => {
   }
 } 
 
+function addToFavourites(Id, title, link, content) { 
+Favorites.push(Id) //
+  db.collection("users").doc("fav").set({ 
+    favourites: Favorites
+  
+},{ merge: true }) 
+.then(() => {
+    console.log("Document successfully written!");
+})
+.catch((error) => {
+    console.error("Error writing document: ", error);
+}); 
 
-//Grabs Current user information 
-/*
-index.prototype.updateUserInfo = function() { 
-   const currentUser = firebase.auth().currentUser;
-   console.log('You are ' + currentUser); 
-   const uid = currentUser.uid; 
-   const userData = {lastLoginTime: new Date()}; 
-   return firebase.firestore().doc(`/users/${uid}`).set(userData); //set call returns a promise, resolves either succesful or failed
-}; 
-
-index.prototype.getFavourites = function(render) { 
-  const uid = firebase.auth().currentUser.uid; 
-  const getFavouritesFunction = firebase
-
-}
-*/
+} 
 
 
 

@@ -86,3 +86,20 @@ loginForm.addEventListener('submit', (e) =>  {
     })
 })
 
+
+//Grabs Current user information 
+/*
+function updateUserInfo() { 
+   const currentUser = firebase.auth().currentUser;
+   console.log('You are ' + currentUser); 
+   const uid = currentUser.uid; 
+   const userData = {lastLoginTime: new Date()}; 
+   return firebase.firestore().doc(`/users/${uid}`).set(userData); //set call returns a promise, resolves either succesful or failed
+}; 
+
+auth.prototype.getFavourites = function(render) { 
+  const uid = firebase.auth().currentUser.uid; 
+  const getFavouritesFunction = firebase.function().
+
+}
+*/

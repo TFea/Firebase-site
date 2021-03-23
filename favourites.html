@@ -1,11 +1,57 @@
-<!DOCTYPE html>  
 <html lang="en">  
 <head>  
-    <title>Likes</title>
-</head>
-<body> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="./style.css" type="text/css"/> <!--checks relationship-->  
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+<!-- Compiled and minified Bootsrap 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --> 
 
-    <h1>Favourites</h1>
+   <title>Finesse</title>   
+
+</head>
+<body  onload="loadfav()"  class="grey lighten-3">  
+   
+    <!-- NAVBAR -->
+  <nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+        <img src="img/Screen Shot 2020-10-08 at 12.58.38 PM 2.svg" style="width: 70px; margin-top: 10px;">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in" style= "display:none;" >
+            <a href="favourites.html" class="grey-text modal-trigger" data-target="modal-account">Favourites</a>
+          </li>
+          <li class="logged-in" style= "display:none;" >
+            <a href="#" class="grey-text" id="logout">Logout</a>
+          </li> 
+          <li class="logged-out" style= "display:none;" >
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style= "display:none;" >
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+      </ul>
+    </div>
+  </nav> 
+
+    <h1>Favourites</h1> 
+     
+    <div> 
+    </div>
     
+
+ <script src="scripts/favourites.js"></script>
+
 </body>
 </html>
