@@ -41,14 +41,17 @@
 
 .card {  
     width: 300px;  
-    height: 300px;
+    height: 300px; 
 } 
 
+
 #card-collection {   
-    border-style: double;
+    width: 1000px; 
     display: flex; 
-    justify-content: space-around; 
+    justify-content: space-between; 
     gap: 5px; 
-    flex-wrap: wrap;
-    width: 100%;
+    flex-wrap: wrap; 
+    float: left; 
+    margin-left: -120px;
 }
+

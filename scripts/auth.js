@@ -10,12 +10,19 @@ auth.onAuthStateChanged(user => {
         db.collection('.messages').onSnapshot(snapshot => {  // goes and gets a handle on the guides collection, onSnapshot allows for immediate updating 
             cuser = user 
             setupGuides(snapshot.docs); 
-            setupUI(user); 
+            setupUI(user);  
+        })  
+        /*
+        db.collection('users').onSnapshot(snapshot => { 
+            setupFavourites(snapshot.doc);
+
         }) 
+        */
     } else { 
         setupUI();
         setupGuides([]); //this fire bcuz there was a state change in user authentication meaning when users are logged in guidelist pops out -- empty array becauseI dont need an output
     }
+
 });  
 
 

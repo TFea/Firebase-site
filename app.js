@@ -11,18 +11,6 @@ const favBtn = document.querySelector ('#favBtn');
 
 
 
-delBtn.addEventListener('click', () => { 
-    db.collection(".messages").doc(".messages").delete().then(() => {
-        console.log("Document successfully deleted!");
-    }).catch((error) => {
-        console.error("Error removing document: ", error);
-    });    
-})
-
-
-
-
-
 
 //Using Promises   
 /*

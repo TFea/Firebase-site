@@ -1,12 +1,15 @@
-
-
-function loadfav() { 
+function loadfav() {  
     console.log (' fav has been loaded ')
+}
+
+
+function setupFavourites(data) { 
+  console.log('setupFavs')
 
 }
 
 
-
+/*
 const setupGuides = (data) => {
     if (data.length) { // making sure someone is logged in by chechiking if the array is empty or not  
       // using Firestore to retrive data on the Guidelist
@@ -16,7 +19,7 @@ const setupGuides = (data) => {
         const guide = doc.data(); 
         //console.log(doc.id);
         const li = 
-      
+    
         ` 
         <div class="card">
           <div class="card-content"  >
@@ -44,3 +47,4 @@ const setupGuides = (data) => {
       guideList.innerHTML = '<h6 class="center-align"> Login or Register to Continue </h6>';
     }
   } 
+*/
