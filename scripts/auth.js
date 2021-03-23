@@ -3,6 +3,7 @@
 //callback function that t\sends back a [snapshot] of the below collection 
 cuser = null
 
+
 //listen for auth status changes  
 auth.onAuthStateChanged(user => { 
     if (user) { 
@@ -23,7 +24,7 @@ auth.onAuthStateChanged(user => {
         setupGuides([]); //this fire bcuz there was a state change in user authentication meaning when users are logged in guidelist pops out -- empty array becauseI dont need an output
     }
 
-});  
+}); 
 
 
 // Add new message  
@@ -94,19 +95,3 @@ loginForm.addEventListener('submit', (e) =>  {
 })
 
 
-//Grabs Current user information 
-/*
-function updateUserInfo() { 
-   const currentUser = firebase.auth().currentUser;
-   console.log('You are ' + currentUser); 
-   const uid = currentUser.uid; 
-   const userData = {lastLoginTime: new Date()}; 
-   return firebase.firestore().doc(`/users/${uid}`).set(userData); //set call returns a promise, resolves either succesful or failed
-}; 
-
-auth.prototype.getFavourites = function(render) { 
-  const uid = firebase.auth().currentUser.uid; 
-  const getFavouritesFunction = firebase.function().
-
-}
-*/

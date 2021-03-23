@@ -9,9 +9,6 @@ const nextBtn = document.querySelector('#nextBtn');
 const favBtn = document.querySelector ('#favBtn'); 
 
 
-
-
-
 //Using Promises   
 /*
 firebase.firestore().enablePersistence() 

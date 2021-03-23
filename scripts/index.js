@@ -1,4 +1,4 @@
-//DOM elements  
+//DOM elements  use for abstractions 
 const guideList =  document.querySelector('.guides'); 
 const LoggedOutLinks = document.querySelectorAll('.logged-out')
 const LoggedInLinks = document.querySelectorAll('.logged-in')  
@@ -35,7 +35,8 @@ const setupUI = (user) =>   {
       //document.getElementsByClassName("delBtn").style.display = 'none';
     }    
 
-} 
+}  
+
 
 const setupGuides = (data) => {
   if (data.length) { // making sure someone is logged in by chechiking if the array is empty or not  
@@ -88,7 +89,7 @@ function deleteCard(Id) {
 }  
 }
 
-
+// Adds the Id of the Message Card to the field in the User ID 
 function addToFavourites(Id, title, link, content) { 
 Favorites.push(Id) 
 console.log(Favorites)
@@ -105,9 +106,6 @@ console.log(Favorites)
 }); 
 
 } 
-
-
-
 
 // setup materialize components
 document.addEventListener('DOMContentLoaded', function() {
