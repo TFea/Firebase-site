@@ -13,12 +13,12 @@ auth.onAuthStateChanged(user => {
             setupGuides(snapshot.docs); 
             setupUI(user);  
         })  
-        /*
+        
         db.collection('users').onSnapshot(snapshot => { 
             setupFavourites(snapshot.doc);
 
         }) 
-        */
+        
     } else { 
         setupUI();
         setupGuides([]); //this fire bcuz there was a state change in user authentication meaning when users are logged in guidelist pops out -- empty array becauseI dont need an output

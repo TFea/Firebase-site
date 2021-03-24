@@ -8,7 +8,6 @@ function setupFavourites(data) {
 
 }
 
-
 /*
 const setupGuides = (data) => {
     if (data.length) { // making sure someone is logged in by chechiking if the array is empty or not  
@@ -47,4 +46,5 @@ const setupGuides = (data) => {
       guideList.innerHTML = '<h6 class="center-align"> Login or Register to Continue </h6>';
     }
   } 
-*/
+
+  */
